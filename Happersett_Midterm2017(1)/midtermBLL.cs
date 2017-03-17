@@ -33,9 +33,9 @@ namespace midterm.BLL
             movieToUpdate.Save();
         }
 
-        public static void Insert(string name)
+        public static void Insert(int id, string name)
         {
-            Movie newMovie = new Movie(name);
+            Movie newMovie = new Movie( id, name);
             newMovie.Save();
 
         }

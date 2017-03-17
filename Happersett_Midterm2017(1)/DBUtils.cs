@@ -46,7 +46,7 @@ namespace midterm.DAL
 
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
-            cmd.CommandText = "INSERT Movies (MovieTitle) VALUES (@Movietitle)";
+            cmd.CommandText = "INSERT Movies MovieTitle VALUES @Movietitle";
 
             cmd.Parameters.AddWithValue("@MovieTitle", newMovie.Name);
 
@@ -55,6 +55,46 @@ namespace midterm.DAL
                 con.Open();
                 cmd.ExecuteNonQuery();
             }
+        }
+
+        public void MovieUpdate( Movie movieToUpdate)
+        {
+            SqlConnection con = new SqlConnection(_connectionString);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+            cmd.CommandText = "UPDATE Movies SET MovieTitle=@MovieTitle WHERE MovieID = @Id";
+
+            cmd.Parameters.AddWithValue("@MovieTitle", movieToUpdate.Name);
+            cmd.Parameters.AddWithValue("@Id", movieToUpdate.Id);
+
+            using (con)
+            {
+                con.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
+        public void MovieDelete(int Id)
+        {
+            SqlConnection con = new SqlConnection(_connectionString);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+            cmd.CommandText = "DELETE Movies WHERE MovieID = @Id";
+
+            cmd.Parameters.AddWithValue("@Id", Id);
+
+
+            using (con)
+            {
+                con.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        static SQLDataAccessLayer()
+        {
+            _connectionString = WebConfigurationManager.ConnectionStrings["Midterm"].ConnectionString;
         }
     }
 }
