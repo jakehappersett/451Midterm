@@ -208,9 +208,10 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Happersett_questionA.aspx" />
-    <Content Include="Happersett_questionB.aspx" />
-    <Content Include="Happersett_questionC.aspx" />
+    <Content Include="Happersett_questionA\Happersett_questionA.aspx" />
+    <Content Include="Happersett_questionB\Happersett_questionB.aspx" />
+    <Content Include="Happersett_questionC\Happersett_questionC.aspx" />
+    <Content Include="Happersett_default.aspx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -241,17 +242,12 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Default.aspx" />
-    <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="packages.config" />
-    <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-    <Content Include="Site.Mobile.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -369,34 +365,13 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="DBUtils.cs" />
-    <Compile Include="midtermBLL.cs" />
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
+    <Compile Include="Happersett_questionC\DBUtils.cs" />
+    <Compile Include="Happersett_questionC\midtermBLL.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Site.Master.cs">
-      <DependentUpon>Site.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Site.Master.designer.cs">
-      <DependentUpon>Site.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Site.Mobile.Master.cs">
-      <DependentUpon>Site.Mobile.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Site.Mobile.Master.designer.cs">
-      <DependentUpon>Site.Mobile.Master</DependentUpon>
-    </Compile>
     <Compile Include="Startup.cs" />
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
@@ -405,30 +380,38 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Happersett_questionA.aspx.cs">
+    <Compile Include="Happersett_questionA\Happersett_questionA.aspx.cs">
       <DependentUpon>Happersett_questionA.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Happersett_questionA.aspx.designer.cs">
+    <Compile Include="Happersett_questionA\Happersett_questionA.aspx.designer.cs">
       <DependentUpon>Happersett_questionA.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Happersett_questionB.aspx.cs">
+    <Compile Include="Happersett_questionB\Happersett_questionB.aspx.cs">
       <DependentUpon>Happersett_questionB.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Happersett_questionB.aspx.designer.cs">
+    <Compile Include="Happersett_questionB\Happersett_questionB.aspx.designer.cs">
       <DependentUpon>Happersett_questionB.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Happersett_questionC.aspx.cs">
+    <Compile Include="Happersett_questionC\Happersett_questionC.aspx.cs">
       <DependentUpon>Happersett_questionC.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Happersett_questionC.aspx.designer.cs">
+    <Compile Include="Happersett_questionC\Happersett_questionC.aspx.designer.cs">
       <DependentUpon>Happersett_questionC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Happersett_default.aspx.cs">
+      <DependentUpon>Happersett_default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Happersett_default.aspx.designer.cs">
+      <DependentUpon>Happersett_default.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="docs\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
