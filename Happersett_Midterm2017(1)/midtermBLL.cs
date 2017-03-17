@@ -10,6 +10,7 @@ namespace midterm.BLL
     {
         private int _id = 0;
         private string _name = String.Empty;
+        private string name;
 
         public int Id
         {
@@ -33,9 +34,9 @@ namespace midterm.BLL
             movieToUpdate.Save();
         }
 
-        public static void Insert(int id, string name)
+        public static void Insert(string name)
         {
-            Movie newMovie = new Movie( id, name);
+            Movie newMovie = new Movie(name);
             newMovie.Save();
 
         }
@@ -55,6 +56,7 @@ namespace midterm.BLL
             else
                 dataAccessLayer.MovieInsert(this);
         }
+        public Movie(string name) :this(0, name) { }
 
         public Movie(int id, string name)
         {
@@ -62,5 +64,8 @@ namespace midterm.BLL
             _name = name;
         }
 
+       
+           
+        
     }
 }

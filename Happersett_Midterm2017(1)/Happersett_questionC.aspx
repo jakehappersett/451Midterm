@@ -20,7 +20,7 @@
         <h1> Add Movie </h1>
         <asp:DetailsView ID="DetailsView1" runat="server" DataSourceID="srcMovies" DefaultMode="Insert" AutoGenerateInsertButton="true" AutoGenerateRows="false">
             <Fields>
-                <asp:BoundField DataField="MovieTitle" HeaderText="MovieTitle" />
+                <asp:BoundField DataField="Name" HeaderText="Name" />
             </Fields>
         </asp:DetailsView>
         <asp:ObjectDataSource

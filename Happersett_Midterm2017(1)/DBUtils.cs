@@ -46,7 +46,7 @@ namespace midterm.DAL
 
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
-            cmd.CommandText = "INSERT Movies MovieTitle VALUES @Movietitle";
+            cmd.CommandText = "INSERT Movies(MovieTitle) VALUES (@Movietitle)";
 
             cmd.Parameters.AddWithValue("@MovieTitle", newMovie.Name);
 
